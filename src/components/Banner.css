@@ -16,8 +16,31 @@
   width: 300px;
 }
 
+.banner__search {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner__searchButton {
+  background-color: white !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  color: #ff7779 !important;
+}
+
 .banner__info > button {
   background-color: #ff7779;
   color: white;
   text-transform: inherit;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.banner__info > button:hover {
+  color: #ff7779;
+  background-color: white;
+  text-transform: inherit;
+}
+
+.banner__info > h5 {
+  margin-top: 10px;
 }

@@ -5,6 +5,11 @@ import { Button } from "@material-ui/core"
 const Banner = () => {
     return (
         <div className='banner'>
+            <div className='banner__search'>
+                <Button 
+                 className='banner__searchButton'
+                 variant='outlinesd'>Search Dates</Button>
+            </div>
             <div className='banner__info'> 
             <h1>Time to Train</h1>
             <h5>
