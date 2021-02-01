@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Banner.css';
-import { Button } from "@material-ui/core"
+import { Button } from "@material-ui/core";
+import Search from './Search';
+import { useHistory } from "react-router-dom";
 
 const Banner = () => {
+    const [showSearch, setShowSearch] = useState (false);
+
     return (
         <div className='banner'>
             <div className='banner__search'>
-                <Button 
-                 className='banner__searchButton'
-                 variant='outlinesd'>Search Dates</Button>
+                {showSearch && <Search />}
+
+                <Button onClick={() => setShowSearch(!showSearch)} className='banner__searchButton' variant='outlined'>
+                    {showSearch ? "Hide" : "Search Dates"}
+                </Button>
             </div>
-            <div className='banner__info'> 
-            <h1>Time to Train</h1>
-            <h5>
-                Search for classes near you. Any style, any ability. The Dojos are open. 
-            </h5>
-            <Button variant='outlined'>
-            Search Nearby
-            </Button>
+            <div className='banner__info'>
+                <h1>Time to Train</h1>
+                <h5>
+                    Find Martial Arts classes near you.
+                </h5>
+                <Button>Search Nearby</Button>
             </div>
         </div>
     )
