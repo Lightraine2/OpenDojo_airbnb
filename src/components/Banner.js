@@ -5,6 +5,7 @@ import Search from './Search';
 import { useHistory } from "react-router-dom";
 
 const Banner = () => {
+    const history = useHistory();
     const [showSearch, setShowSearch] = useState (false);
 
     return (
@@ -21,7 +22,7 @@ const Banner = () => {
                 <h5>
                     Find Martial Arts classes near you.
                 </h5>
-                <Button>Search Nearby</Button>
+                <Button onClick={() => history.push('/search')}>Search Nearby</Button>
             </div>
         </div>
     )
